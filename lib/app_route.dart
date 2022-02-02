@@ -15,7 +15,7 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) => const GetStartedScreen() );
       
       case tipsScreen:
-        return MaterialPageRoute(builder: (_) => const TipsScreen() );
+        return MaterialPageRoute(builder: (_) => TipsScreen() );
     }
   }
 }
