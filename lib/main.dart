@@ -16,10 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      onGenerateRoute: appRoute.onGenerateRoute,
-      initialRoute: splashScreen,
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        onGenerateRoute: appRoute.onGenerateRoute,
+        initialRoute: splashScreen,
+      ),
     );
   }
 }

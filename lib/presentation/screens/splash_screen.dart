@@ -15,21 +15,29 @@ class _SplashState extends State<Splash> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3),
-        () => Navigator.of(context).pushReplacementNamed(tipsScreen));
+        () => Navigator.of(context).pushReplacementNamed(getStartedScreen));
   }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: MyColors.primaryColor,
       body: Center(
-        child: Text(
-          "مرحبا بك في مطعمنا",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: const [
+            Text(
+              "مرحبا بك في مطعمنا",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            CircularProgressIndicator(
+              color: Colors.white,
+            ),
+          ],
         ),
       ),
     );
